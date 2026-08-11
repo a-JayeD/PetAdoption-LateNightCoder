@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawHome - Adoption Complete</title>
+    <link rel="stylesheet" href="css/adoption-complete.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">PawHome</span>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Dashboard</a>
+        </nav>
+        <div class="header-right">
+            <button class="notification-btn">🔔</button>
+            <div class="profile-avatar">👤</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="complete-container">
+        <div class="complete-content">
+            <!-- Success Section -->
+            <div class="success-section">
+                <div class="success-icon">✓</div>
+                <h1>Congratulations! You're All Set! 🎉</h1>
+                <p class="success-subtitle">Your adoption application has been submitted successfully.</p>
+                
+                <div class="pet-summary" id="petSummary">
+                    <!-- Pet summary will be inserted here -->
+                </div>
+            </div>
+
+            <!-- Pickup Details Section -->
+            <div class="pickup-section">
+                <h2>Pickup Details</h2>
+                
+                <div class="pickup-grid">
+                    <!-- Pickup Location -->
+                    <div class="pickup-card">
+                        <div class="card-icon">📍</div>
+                        <h3>Location</h3>
+                        <p class="card-label">Pickup Address</p>
+                        <p class="card-value" id="pickupLocation">PawHome Adoption Center North<br>1234 Sunset Boulevard<br>San Francisco, CA 94115</p>
+                        <a href="#" class="card-link">Get Directions →</a>
+                    </div>
+
+                    <!-- Pickup Date & Time -->
+                    <div class="pickup-card">
+                        <div class="card-icon">📅</div>
+                        <h3>Pickup Date & Time</h3>
+                        <p class="card-label">Scheduled Pickup</p>
+                        <p class="card-value" id="pickupDateTime">Saturday, October 19, 2024<br>2:00 PM - 4:00 PM</p>
+                        <button class="card-link-btn" onclick="reschedulePickup()">Reschedule →</button>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="pickup-card">
+                        <div class="card-icon">📞</div>
+                        <h3>Contact Information</h3>
+                        <p class="card-label">Questions? Reach Out</p>
+                        <p class="card-value">
+                            <strong>Phone:</strong> +1 (555) 123-4567<br>
+                            <strong>Email:</strong> adoptions@pawhome.org
+                        </p>
+                        <button class="card-link-btn" onclick="contactSupport()">Contact Us →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Important Notes & Requirements -->
+            <div class="requirements-section">
+                <h2>Important Notes & Requirements</h2>
+                
+                <div class="requirements-box">
+                    <h3>What to Bring</h3>
+                    <ul class="requirement-list">
+                        <li>
+                            <span class="req-icon">✓</span>
+                            <span class="req-text"><strong>Valid ID & Proof of Residence</strong> - Driver's license or government-issued ID and proof of current address</span>
+                        </li>
+                        <li>
+                            <span class="req-icon">✓</span>
+                            <span class="req-text"><strong>Pet Carrier or Travel Crate</strong> - For safe transport of your new pet home</span>
+                        </li>
+                        <li>
+                            <span class="req-icon">✓</span>
+                            <span class="req-text"><strong>Food & Supplies</strong> - Bring the same food brand your pet currently eats to avoid digestive issues</span>
+                        </li>
+                        <li>
+                            <span class="req-icon">✓</span>
+                            <span class="req-text"><strong>Leash & Collar</strong> - For dogs, bring a proper-fitting collar and leash</span>
+                        </li>
+                        <li>
+                            <span class="req-icon">✓</span>
+                            <span class="req-text"><strong>Payment Method</strong> - Credit/debit card or check for final adoption fees</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="requirements-box warning">
+                    <h3>Important Information</h3>
+                    <ul class="requirement-list">
+                        <li>
+                            <span class="req-icon info">ℹ️</span>
+                            <span class="req-text">Your pet has been vaccinated and microchipped. Please register the microchip at <strong>www.petmicrochip.org</strong></span>
+                        </li>
+                        <li>
+                            <span class="req-icon info">ℹ️</span>
+                            <span class="req-text">Allow your pet 7-10 days to adjust to their new home before introducing them to other pets</span>
+                        </li>
+                        <li>
+                            <span class="req-icon info">ℹ️</span>
+                            <span class="req-text">Schedule a vet visit within 2 weeks for a health checkup</span>
+                        </li>
+                        <li>
+                            <span class="req-icon info">ℹ️</span>
+                            <span class="req-text">If you have any concerns, contact our support team immediately</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="pet-notes" id="petSpecificNotes">
+                    <!-- Pet-specific notes will be inserted here -->
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn-primary" onclick="downloadDocuments()">Download Documents</button>
+                <button class="btn-secondary" onclick="goToPage('index.html')">Back to Dashboard</button>
+            </div>
+
+            <!-- Support Section -->
+            <div class="support-section">
+                <p><strong>Need Help?</strong> Our adoption team is here to support you! Call us at <strong>+1 (555) 123-4567</strong> or email <strong>adoptions@pawhome.org</strong></p>
+            </div>
+
+            <footer class="complete-footer">
+                <p>Copyright © 2024 PawHome Initiative. All rights reserved.</p>
+            </footer>
+        </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/adoption-complete.js"></script>
+</body>
+</html>

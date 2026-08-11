@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawHome - Account Created</title>
+    <link rel="stylesheet" href="css/account-created.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">PawHome</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="notification-btn">🔔</button>
+            <div class="profile-avatar">👤</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="success-container">
+        <div class="success-card">
+            <div class="success-icon">✓</div>
+            
+            <h1>Account Created Successfully!</h1>
+            
+            <p class="subtitle">Welcome to PawHome! Let's find your perfect pet match.</p>
+            
+            <p class="description">
+                Complete a quick eligibility quiz to help our team understand your living environment and get personalized pet recommendations.
+            </p>
+
+            <div class="quiz-info">
+                <span class="info-icon">🐾</span>
+                <p>Takes less than 3 minutes + 5 tailored questions</p>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-start-quiz" onclick="goToPage('quiz.html')">Start Eligibility Quiz</button>
+                <button class="btn-skip" onclick="goToPage('index.html')">Skip for now — Browse Pets</button>
+            </div>
+
+            <footer class="success-footer">
+                <p>Copyright © 2024 PawHome Initiative. All rights reserved.</p>
+            </footer>
+        </div>
+    </main>
+
+    <script src="js/navigation.js"></script>
+</body>
+</html>

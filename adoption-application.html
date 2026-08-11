@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawHome - Adoption Application</title>
+    <link rel="stylesheet" href="css/adoption-application.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">PawHome</span>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Dashboard</a>
+            <a href="pet-details.html" class="nav-link">Pet Profile</a>
+            <a href="adoption-application.html" class="nav-link active">Apply to Adopt</a>
+        </nav>
+        <div class="header-right">
+            <button class="notification-btn">🔔</button>
+            <div class="profile-avatar">👤</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="adoption-container">
+        <!-- Progress Indicator -->
+        <div class="progress-section">
+            <h2>Adoption Progress</h2>
+            <div class="progress-steps" id="progressSteps">
+                <!-- Steps will be generated dynamically -->
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar" style="width: 0%;"></div>
+            </div>
+        </div>
+
+        <!-- Form Content -->
+        <div class="form-section">
+            <div id="formContainer">
+                <!-- Forms will be generated dynamically -->
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="form-buttons">
+                <button type="button" class="btn-back-form" id="prevBtn" onclick="previousStep()" style="display: none;">Back</button>
+                <button type="button" class="btn-next" id="nextBtn" onclick="nextStep()">Next Step</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/adoption-application.js"></script>
+</body>
+</html>

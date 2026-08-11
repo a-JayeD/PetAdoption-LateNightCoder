@@ -1,3 +1,4 @@
+
 // ============================================
 // PET DETAILS PAGE FUNCTIONS
 // ============================================
@@ -27,11 +28,15 @@ function displayPetDetails(pet) {
     detailsContent.innerHTML = `
         <div class="pet-details-header">
             <div class="pet-details-image">
-                <img src="${pet.image}" alt="${pet.name}">
+                <img src="${pet.image}" alt="${pet.name}" loading="lazy">
             </div>
             <div class="pet-details-info">
                 <h1>${pet.name}</h1>
                 <p class="pet-details-breed">${pet.breed}</p>
+                
+                <div class="button-actions">
+                    <button class="detail-btn" onclick="applyToAdopt(${pet.id}, '${pet.name}')">Apply to Adopt</button>
+                </div>
                 
                 <div class="detail-item">
                     <div class="detail-label">Age</div>
@@ -51,8 +56,6 @@ function displayPetDetails(pet) {
                 <div class="pet-details-traits">
                     ${pet.traits.map(trait => `<span class="trait-badge">${trait}</span>`).join('')}
                 </div>
-                
-                <button class="detail-btn" onclick="adoptPet('${pet.name}')">Apply to Adopt</button>
             </div>
         </div>
 
@@ -77,11 +80,12 @@ function displayPetDetails(pet) {
 }
 
 /**
- * Handle adoption
- * @param {string} petName - Pet name
+ * Apply to adopt
  */
-function adoptPet(petName) {
-    alert(`Thank you for your interest in adopting ${petName}! Our team will contact you soon with next steps.`);
+function applyToAdopt(petId, petName) {
+    setSessionData('adoptingPetId', petId);
+    setSessionData('adoptingPetName', petName);
+    goToPage('adoption-application.html');
 }
 
 // Initialize on page load

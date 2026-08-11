@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PawHome - Match Quiz</title>
-    <link rel="stylesheet" href="style.css">
+    <title>PawHome - Eligibility Quiz</title>
+    <link rel="stylesheet" href="css/quiz.css">
 </head>
 <body>
     <!-- Header -->
@@ -17,6 +17,7 @@
         </div>
         <nav class="nav">
             <a href="index.html" class="nav-link">Dashboard</a>
+            <a href="adoption-application.html" class="nav-link">Apply to Adopt</a>
         </nav>
         <div class="header-right">
             <button class="notification-btn">🔔</button>
@@ -24,26 +25,56 @@
         </div>
     </header>
 
-    <!-- Quiz Content -->
-    <main class="quiz-container">
-        <button class="btn-back" onclick="goToPage('index.html')">← Back</button>
-        
-        <div class="quiz-card">
-            <div class="quiz-progress">
-                <div class="progress-bar" id="progressBar"></div>
-            </div>
+    <!-- Main Content -->
+    <main class="quiz-main-container">
+        <div class="quiz-layout">
+            <!-- Left Sidebar -->
+            <aside class="quiz-sidebar">
+                <div class="quiz-info-card">
+                    <h3>Why Take the Quiz? 🐾</h3>
+                    <p>At PawHome, we strive to build lifelong connections. This 2-minute quiz aligns your home environment and experience level with shelter pets best suited to your lifestyle.</p>
+                    
+                    <div class="quiz-look-for">
+                        <p><strong>What we look for:</strong></p>
+                        <ul>
+                            <li>✓ Yard and fence availability</li>
+                            <li>✓ Existing household pet dynamics</li>
+                            <li>✓ Previous experience and training comfort</li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
 
-            <div id="quizContent">
-                <!-- Questions will be dynamically inserted -->
-            </div>
+            <!-- Right Content -->
+            <section class="quiz-content">
+                <!-- Progress Section -->
+                <div class="quiz-progress-section">
+                    <h3>Quiz Progress</h3>
+                    <div class="quiz-progress-bar-container">
+                        <div class="quiz-progress-bar" id="quizProgressBar"></div>
+                    </div>
+                    <p class="quiz-progress-text" id="quizProgressText">Question 1 of 5 (20% complete)</p>
+                </div>
 
-            <div class="quiz-buttons">
-                <button class="btn btn-secondary" id="prevBtn" onclick="previousQuestion()" style="display:none;">Previous</button>
-                <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">Next</button>
-            </div>
+                <!-- Quiz Question -->
+                <div class="quiz-question-container">
+                    <h2 id="quizQuestionTitle">Question Title</h2>
+                    <div id="quizQuestionContent">
+                        <!-- Dynamic content will be inserted -->
+                    </div>
+                </div>
+
+                <!-- Quiz Navigation -->
+                <div class="quiz-nav-buttons">
+                    <button class="btn-back" id="quizBackBtn" onclick="previousQuizQuestion()" style="display: none;">Back</button>
+                    <button class="btn-next-quiz" id="quizNextBtn" onclick="nextQuizQuestion()">Next</button>
+                </div>
+            </section>
         </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/quiz.js"></script>
 </body>
 </html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawHome - Boarding Care</title>
+    <link rel="stylesheet" href="css/boarding.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">PawHome</span>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Dashboard</a>
+            <a href="pet-details.html" class="nav-link">Pet Profile</a>
+            <a href="boarding.html" class="nav-link active">Boarding</a>
+        </nav>
+        <div class="header-right">
+            <button class="notification-btn">🔔</button>
+            <div class="profile-avatar">👤</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="boarding-container">
+        <div class="boarding-content">
+            <!-- Left Section - Form -->
+            <div class="boarding-form-section">
+                <h2>Request Boarding Care</h2>
+                <p class="subtitle">Safe, warm, and playful care for your pet when you need it most.</p>
+
+                <form class="boarding-form" id="boardingForm">
+                    <!-- Pet Selection -->
+                    <div class="form-group">
+                        <label>Which pet is staying with us?</label>
+                        <select id="petSelect" class="form-select" onchange="updateBoardingPrice()">
+                            <option value="">Select a pet...</option>
+                            <option value="1" data-name="Biscuit" data-price="36">Biscuit (Golden Retriever)</option>
+                            <option value="2" data-name="Luna" data-price="28">Luna (Siamese Cat)</option>
+                            <option value="3" data-name="Rocky" data-price="32">Rocky (French Bulldog)</option>
+                            <option value="4" data-name="Cooper" data-price="40">Cooper (Border Collie)</option>
+                            <option value="5" data-name="Bella" data-price="26">Bella (Ragdoll Cat)</option>
+                            <option value="6" data-name="Milo" data-price="34">Milo (Beagle Mix)</option>
+                        </select>
+                    </div>
+
+                    <!-- Date Selection -->
+                    <div class="form-group">
+                        <label>Select Boarding Dates</label>
+                        <div class="date-group">
+                            <div class="date-input">
+                                <span class="calendar-icon">📅</span>
+                                <input type="date" id="startDate" class="form-input" placeholder="Start: Oct 14, 2024" onchange="calculatePrice()">
+                            </div>
+                            <div class="date-input">
+                                <span class="calendar-icon">📅</span>
+                                <input type="date" id="endDate" class="form-input" placeholder="End: Oct 19, 2024" onchange="calculatePrice()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Special Instructions -->
+                    <div class="form-group">
+                        <label>Special Care & Dietary Instructions</label>
+                        <textarea class="form-textarea" id="specialCare" placeholder="Biscuit eats 2 times a day. Please keep active with fetch toys. Has slight medication at morning."></textarea>
+                    </div>
+
+                    <!-- Emergency Contact -->
+                    <div class="form-group">
+                        <label>Emergency Contact Details</label>
+                        <div class="contact-group">
+                            <input type="text" class="form-input" placeholder="Name: Jane Doe" id="contactName">
+                            <input type="tel" class="form-input" placeholder="Phone: +1555-0192" id="contactPhone">
+                        </div>
+                    </div>
+
+                    <!-- Agreement -->
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="agreeTerms">
+                            <span>I agree to the PawHome Boarding & Liability Policy agreement.</span>
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn-submit">Submit Boarding Request</button>
+                </form>
+            </div>
+
+            <!-- Right Section - Summary -->
+            <div class="boarding-summary-section">
+                <div class="summary-card">
+                    <h3>Boarding Plan Summary</h3>
+                    
+                    <div class="summary-item">
+                        <span>Est. Boarding duration</span>
+                        <span id="duration">5 Nights</span>
+                    </div>
+
+                    <div class="summary-item">
+                        <span>Daily care package cost</span>
+                        <span id="dailyPrice">\$36.00 / night</span>
+                    </div>
+
+                    <div class="summary-item">
+                        <span>Special medication charge</span>
+                        <span>Included</span>
+                    </div>
+
+                    <div class="summary-item">
+                        <span>Tax & Insurance fee</span>
+                        <span>\$12.50</span>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-total">
+                        <span>Estimated Total</span>
+                        <span id="totalPrice">\$187.50</span>
+                    </div>
+
+                    <div class="activity-schedule">
+                        <h4>Activity Schedule Includes:</h4>
+                        <ul>
+                            <li>✓ 3 daily outdoor bathroom breaks</li>
+                            <li>✓ 1-on-1 socialization playtime</li>
+                            <li>✓ Evening cuddle session & bedtime check</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/boarding.js"></script>
+</body>
+</html>
