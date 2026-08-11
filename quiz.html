@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawHome - Match Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">PawHome</span>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Dashboard</a>
+        </nav>
+        <div class="header-right">
+            <button class="notification-btn">🔔</button>
+            <div class="profile-avatar">👤</div>
+        </div>
+    </header>
+
+    <!-- Quiz Content -->
+    <main class="quiz-container">
+        <button class="btn-back" onclick="goToPage('index.html')">← Back</button>
+        
+        <div class="quiz-card">
+            <div class="quiz-progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <div id="quizContent">
+                <!-- Questions will be dynamically inserted -->
+            </div>
+
+            <div class="quiz-buttons">
+                <button class="btn btn-secondary" id="prevBtn" onclick="previousQuestion()" style="display:none;">Previous</button>
+                <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">Next</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

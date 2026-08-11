@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawHome - Pet Details</title>
+    <link rel="stylesheet" href="css/pet-details.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">PawHome</span>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Dashboard</a>
+            <a href="#" class="nav-link">Pet Profile</a>
+        </nav>
+        <div class="header-right">
+            <button class="notification-btn">🔔</button>
+            <div class="profile-avatar">👤</div>
+        </div>
+    </header>
+
+    <!-- Pet Details -->
+    <main class="pet-details-container">
+        <button class="btn-back" onclick="goToPage('index.html')">← Back to Dashboard</button>
+
+        <div class="pet-details-content" id="petDetailsContent">
+            <!-- Details will be dynamically inserted -->
+        </div>
+    </main>
+
+    <!-- JavaScript Imports -->
+    <script src="js/data.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/pet-details.js"></script>
+</body>
+</html>

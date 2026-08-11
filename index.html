@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawHome - Pet Adoption Dashboard</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">PawHome</span>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link active">Dashboard</a>
+        </nav>
+        <div class="header-right">
+            <button class="notification-btn">🔔</button>
+            <div class="profile-avatar">👤</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="match-card">
+                <h2>Find Your Perfect Match 🐾</h2>
+                <p>Unsure which furry friend fits your lifestyle? Take our quick 2-minute personality matching quiz!</p>
+                <button class="btn-primary" onclick="goToPage('quiz.html')">Start Match Quiz</button>
+            </div>
+        </aside>
+
+        <!-- Right Content -->
+        <section class="content">
+            <!-- Search and Filters -->
+            <div class="search-section">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search by breed, color, or character..." class="search-input">
+                    <button class="btn-search">Search</button>
+                </div>
+
+                <div class="filters">
+                    <select id="speciesFilter" class="filter-select">
+                        <option value="">Species: All</option>
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="rabbit">Rabbit</option>
+                        <option value="bird">Bird</option>
+                    </select>
+
+                    <select id="breedFilter" class="filter-select">
+                        <option value="">Breed: Any</option>
+                        <option value="golden-retriever">Golden Retriever</option>
+                        <option value="siamese-cat">Siamese Cat</option>
+                        <option value="french-bulldog">French Bulldog</option>
+                        <option value="border-collie">Border Collie</option>
+                    </select>
+
+                    <select id="ageFilter" class="filter-select">
+                        <option value="">Age: Young/Adult</option>
+                        <option value="young">Young (0-2 years)</option>
+                        <option value="adult">Adult (2-7 years)</option>
+                        <option value="senior">Senior (7+ years)</option>
+                    </select>
+
+                    <select id="sizeFilter" class="filter-select">
+                        <option value="">Size: Medium</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+
+                    <select id="traitFilter" class="filter-select">
+                        <option value="">Trait: Active</option>
+                        <option value="active">Active</option>
+                        <option value="calm">Calm</option>
+                        <option value="playful">Playful</option>
+                        <option value="friendly">Friendly</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Pet Cards Grid -->
+            <div class="pets-grid" id="petsGrid">
+                <!-- Pet cards will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript Imports -->
+    <script src="js/data.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawHome - Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="login-page">
+        <!-- Left Section - Form -->
+        <div class="login-left">
+            <div class="login-container">
+                <div class="login-header">
+                    <div class="logo">
+                        <span class="logo-icon">🐾</span>
+                        <span class="logo-text">PawHome</span>
+                    </div>
+                    <p class="tagline">Rescue & Adoption</p>
+                </div>
+
+                <div class="welcome-section">
+                    <h1>Welcome Back</h1>
+                    <p>Sign in to manage adoptions and care for shelter pets.</p>
+
+                    <div class="role-buttons">
+                        <button class="role-btn staff-btn active" onclick="setRole('staff')">Staff Member</button>
+                        <button class="role-btn adopter-btn" onclick="setRole('adopter')">Adopter Portal</button>
+                    </div>
+                </div>
+
+                <form class="login-form">
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="sarah.chen@pawhome.org" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="••••••••" required>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox">
+                            Remember me
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-login">Log In to Workspace</button>
+                </form>
+
+                <div class="signup-link">
+                    Don't have an account? <a href="signup.html">Sign up</a>
+                </div>
+
+                <footer class="login-footer">
+                    <p>Copyright © 2024 PawHome Initiative. All rights reserved.</p>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Right Section - Image -->
+        <div class="login-right">
+            <div class="login-image">
+                <div class="image-overlay">
+                    <h2>Bringing hearts together, one paw at a time.</h2>
+                    <p>Your dedicated dashboard helps track rescued intakes, manage shelter operations, and match eager pets with their perfect forever homes.</p>
+                    <button class="explore-btn">Explore Admin Portal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
