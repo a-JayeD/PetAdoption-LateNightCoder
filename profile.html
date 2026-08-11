@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawHome - My Profile</title>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <!-- Header with Profile Dropdown -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo" onclick="goToPage('index.html')" style="cursor: pointer;">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">PawHome</span>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Dashboard</a>
+            <a href="profile.html" class="nav-link active">My Profile</a>
+        </nav>
+        <div class="header-right">
+            <button class="notification-btn">🔔</button>
+            <div class="profile-dropdown-container">
+                <div class="profile-avatar" id="profileAvatarHeader" onclick="toggleProfileDropdown()">👤</div>
+                <div class="profile-dropdown" id="profileDropdown" style="display: none;">
+                    <div class="dropdown-header" id="dropdownName">User Name</div>
+                    <p class="dropdown-email" id="dropdownEmail">user@example.com</p>
+                    <div class="dropdown-divider"></div>
+                    <a href="profile.html" class="dropdown-item">👤 View Profile</a>
+                    <a href="#" class="dropdown-item" onclick="handleLogout(event)">🚪 Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="profile-container">
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <div class="profile-banner"></div>
+            <div class="profile-hero">
+                <div class="profile-picture" id="profilePicture">👤</div>
+                <div class="profile-basic-info">
+                    <h1 id="profileName">User Name</h1>
+                    <p class="profile-status" id="profileStatus">Active Member</p>
+                    <p class="profile-join-date" id="profileJoinDate">Joined: January 15, 2024</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Content -->
+        <div class="profile-content">
+            <!-- Left Sidebar -->
+            <aside class="profile-sidebar">
+                <div class="profile-menu">
+                    <a href="#personal-info" class="menu-item active" onclick="switchTab('personal')">📋 Personal Information</a>
+                    <a href="#adoption-history" class="menu-item" onclick="switchTab('adoption')">🏠 Adoption History</a>
+                    <a href="#applications" class="menu-item" onclick="switchTab('applications')">📝 My Applications</a>
+                    <a href="#preferences" class="menu-item" onclick="switchTab('preferences')">⚙️ Preferences</a>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <section class="profile-main">
+                <!-- Personal Information Tab -->
+                <div id="personal-info-tab" class="tab-content active">
+                    <div class="section-card">
+                        <div class="section-header">
+                            <h2>Personal Information</h2>
+                            <button class="btn-edit" onclick="editProfile()">✎ Edit</button>
+                        </div>
+
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <label>Full Name</label>
+                                <p id="infoName">-</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Email Address</label>
+                                <p id="infoEmail">-</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Phone Number</label>
+                                <p id="infoPhone">-</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Home Address</label>
+                                <p id="infoAddress">-</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adoption History Tab -->
+                <div id="adoption-history-tab" class="tab-content">
+                    <div class="section-card">
+                        <h2>Adoption History</h2>
+                        <div id="adoptionHistoryContent">
+                            <!-- Dynamically loaded -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Applications Tab -->
+                <div id="applications-tab" class="tab-content">
+                    <div class="section-card">
+                        <h2>My Applications</h2>
+                        <div id="applicationsContent">
+                            <!-- Dynamically loaded -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preferences Tab -->
+                <div id="preferences-tab" class="tab-content">
+                    <div class="section-card">
+                        <h2>Preferences & Settings</h2>
+                        <div class="preferences-group">
+                            <label class="preference-item">
+                                <input type="checkbox" checked>
+                                <span>Receive adoption notifications</span>
+                            </label>
+                            <label class="preference-item">
+                                <input type="checkbox" checked>
+                                <span>Email updates on new matches</span>
+                            </label>
+                            <label class="preference-item">
+                                <input type="checkbox">
+                                <span>Marketing emails</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

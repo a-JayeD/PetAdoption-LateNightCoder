@@ -8,21 +8,34 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="header-left">
-            <div class="logo">
-                <span class="logo-icon">🐾</span>
-                <span class="logo-text">PawHome</span>
+    <!-- Updated Header in index.html -->
+<header class="header">
+    <div class="header-left">
+        <div class="logo" onclick="goToPage('index.html')" style="cursor: pointer;">
+            <span class="logo-icon">🐾</span>
+            <span class="logo-text">PawHome</span>
+        </div>
+    </div>
+    <nav class="nav">
+        <a href="index.html" class="nav-link active">Dashboard</a>
+        <a href="#" id="adoptionLink" class="nav-link" onclick="handleProtectedNavigation(event, 'adoption-application.html')">Apply to Adopt</a>
+    </nav>
+    <div class="header-right">
+        <button class="notification-btn">🔔</button>
+        <div class="profile-dropdown-container">
+            <div class="profile-avatar" id="profileAvatarHeader" onclick="toggleProfileDropdown()">👤</div>
+            <div class="profile-dropdown" id="profileDropdown" style="display: none;">
+                <div class="dropdown-header" id="dropdownName">Guest</div>
+                <p class="dropdown-email" id="dropdownEmail">Not logged in</p>
+                <div class="dropdown-divider"></div>
+                <a href="profile.html" class="dropdown-item" id="profileLink" style="display: none;">👤 My Profile</a>
+                <a href="login.html" class="dropdown-item" id="loginLink">🔐 Login</a>
+                <a href="signup.html" class="dropdown-item" id="signupLink">📝 Sign Up</a>
+                <a href="#" class="dropdown-item" id="logoutLink" style="display: none;" onclick="handleLogout(event)">🚪 Logout</a>
             </div>
         </div>
-        <nav class="nav">
-            <a href="index.html" class="nav-link active">Dashboard</a>
-        </nav>
-        <div class="header-right">
-            <button class="notification-btn">🔔</button>
-            <div class="profile-avatar">👤</div>
-        </div>
-    </header>
+    </div>
+</header>
 
     <!-- Main Content -->
     <main class="main-container">
@@ -95,6 +108,11 @@
     <!-- JavaScript Imports -->
     <script src="js/data.js"></script>
     <script src="js/navigation.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/navigation-auth.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>

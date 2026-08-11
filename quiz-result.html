@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawHome - Quiz Results & Matches</title>
+    <link rel="stylesheet" href="css/quiz-results.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">PawHome</span>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Dashboard</a>
+            <a href="adoption-application.html" class="nav-link">Apply to Adopt</a>
+        </nav>
+        <div class="header-right">
+            <button class="notification-btn">🔔</button>
+            <div class="profile-avatar">👤</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="results-container">
+        <!-- Header Section -->
+        <div class="results-header">
+            <p class="results-tag">✓ Compatibility Match Ready!</p>
+            <h1>Your Perfect Matches!</h1>
+            <p class="results-subtitle">Based on your lifestyle quiz, here are the best companions currently waiting for forever families.</p>
+        </div>
+
+        <!-- Matches Grid -->
+        <div class="matches-grid" id="matchesGrid">
+            <!-- Match cards will be generated dynamically -->
+        </div>
+
+        <!-- Browse All Button -->
+        <div class="browse-section">
+            <button class="btn-browse-all" onclick="goToPage('index.html')">Browse All Pets</button>
+            <p class="browse-subtitle">Not quite what you were looking for? Refine your preferences anytime.</p>
+        </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/quiz-results.js"></script>
+</body>
+</html>

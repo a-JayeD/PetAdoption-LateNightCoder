@@ -3,6 +3,24 @@
 // ============================================
 
 // Pet-specific pickup notes
+
+// Add to quiz-new.js
+function initializeQuiz() {
+    if (!requireLogin('login.html')) {
+        return;
+    }
+    
+    // ... rest of initialization
+}
+
+// Add to adoption-application.js
+function initializeAdoption() {
+    if (!requireLogin('login.html')) {
+        return;
+    }
+    
+    // ... rest of initialization
+}
 const petPickupNotes = {
     1: {
         name: "Biscuit",

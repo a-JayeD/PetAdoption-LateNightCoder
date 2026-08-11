@@ -3,33 +3,37 @@
 // ============================================
 
 /**
- * Set user role
- * @param {string} role - User role
+ * Handle login form submission
  */
-function setRole(role) {
-    const staffBtn = document.querySelector('.staff-btn');
-    const adopterBtn = document.querySelector('.adopter-btn');
-
-    staffBtn.classList.remove('active');
-    adopterBtn.classList.remove('active');
-
-    if (role === 'staff') {
-        staffBtn.classList.add('active');
+function handleLogin(event) {
+    event.preventDefault();
+    
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+    const errorDiv = document.getElementById('loginError');
+    
+    // Clear previous errors
+    errorDiv.style.display = 'none';
+    
+    // Attempt login
+    const result = loginUser(email, password);
+    
+    if (result.success) {
+        // Redirect to dashboard
+        setTimeout(() => {
+            goToPage('index.html');
+        }, 500);
     } else {
-        adopterBtn.classList.add('active');
+        // Show error
+        errorDiv.textContent = result.message;
+        errorDiv.style.display = 'block';
     }
-
-    setSessionData('userRole', role);
 }
 
-// Form submission
+// Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
-    const loginForm = document.querySelector('.login-form');
-    if (loginForm) {
-        loginForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Login successful! Redirecting...');
-            goToPage('index.html');
-        });
+    // If already logged in, redirect to dashboard
+    if (isLoggedIn()) {
+        goToPage('index.html');
     }
 });

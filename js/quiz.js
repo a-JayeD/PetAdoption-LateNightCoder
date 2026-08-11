@@ -18,23 +18,29 @@ function initializeQuiz() {
  * Display quiz question
  */
 function displayQuizQuestion() {
-    const quizContent = document.getElementById("quizContent");
+    const quizTitle = document.getElementById("quizQuestionTitle");
+    const quizContent = document.getElementById("quizQuestionContent");
     const question = quizQuestions[currentQuestionIndex];
-    
-    quizContent.innerHTML = `
-        <div class="quiz-question">
-            <h3>Question ${currentQuestionIndex + 1} of ${quizQuestions.length}</h3>
-            <h3>${question.question}</h3>
-            <div class="quiz-options">
-                ${question.options.map((option, index) => `
-                    <label class="quiz-option">
-                        <input type="radio" name="answer" value="${option}" ${quizAnswers[currentQuestionIndex] === option ? 'checked' : ''}>
-                        <span>${option}</span>
-                    </label>
-                `).join('')}
+
+    if (quizTitle) {
+        quizTitle.textContent = `Question ${currentQuestionIndex + 1} of ${quizQuestions.length}`;
+    }
+
+    if (quizContent) {
+        quizContent.innerHTML = `
+            <div class="quiz-question">
+                <h3>${question.question}</h3>
+                <div class="quiz-options">
+                    ${question.options.map((option) => `
+                        <label class="quiz-option">
+                            <input type="radio" name="answer" value="${option}" ${quizAnswers[currentQuestionIndex] === option ? 'checked' : ''}>
+                            <span>${option}</span>
+                        </label>
+                    `).join('')}
+                </div>
             </div>
-        </div>
-    `;
+        `;
+    }
 
     updateProgressBar();
     updateQuizButtons();
@@ -45,20 +51,33 @@ function displayQuizQuestion() {
  * Update progress bar
  */
 function updateProgressBar() {
-    const progressBar = document.getElementById("progressBar");
+    const progressBar = document.getElementById("quizProgressBar");
+    const progressText = document.getElementById("quizProgressText");
     const progress = ((currentQuestionIndex + 1) / quizQuestions.length) * 100;
-    progressBar.style.width = progress + "%";
+
+    if (progressBar) {
+        progressBar.style.width = progress + "%";
+    }
+
+    if (progressText) {
+        progressText.textContent = `Question ${currentQuestionIndex + 1} of ${quizQuestions.length} (${Math.round(progress)}% complete)`;
+    }
 }
 
 /**
  * Update quiz buttons
  */
 function updateQuizButtons() {
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
+    const prevBtn = document.getElementById("quizBackBtn");
+    const nextBtn = document.getElementById("quizNextBtn");
 
-    prevBtn.style.display = currentQuestionIndex === 0 ? "none" : "block";
-    nextBtn.textContent = currentQuestionIndex === quizQuestions.length - 1 ? "See Results" : "Next";
+    if (prevBtn) {
+        prevBtn.style.display = currentQuestionIndex === 0 ? "none" : "block";
+    }
+
+    if (nextBtn) {
+        nextBtn.textContent = currentQuestionIndex === quizQuestions.length - 1 ? "See Results" : "Next";
+    }
 }
 
 /**
@@ -93,6 +112,10 @@ function nextQuestion() {
     }
 }
 
+function nextQuizQuestion() {
+    nextQuestion();
+}
+
 /**
  * Previous question
  */
@@ -103,14 +126,19 @@ function previousQuestion() {
     }
 }
 
+function previousQuizQuestion() {
+    previousQuestion();
+}
+
 /**
  * Show results
  */
 function showQuizResults() {
-    const quizContent = document.getElementById("quizContent");
+    const quizContent = document.getElementById("quizQuestionContent");
     const recommendedPet = getRandomItem(petsData);
 
-    quizContent.innerHTML = `
+    if (quizContent) {
+        quizContent.innerHTML = `
         <div style="text-align: center;">
             <h2 style="color: #16a085; margin-bottom: 1rem; font-size: 2rem;">Your Perfect Match! 🐾</h2>
             <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #666;">Based on your answers, we think <strong>${recommendedPet.name}</strong> might be your perfect companion!</p>
@@ -129,8 +157,16 @@ function showQuizResults() {
         </div>
     `;
 
-    document.getElementById("prevBtn").style.display = "none";
-    document.getElementById("nextBtn").style.display = "none";
+    const prevBtn = document.getElementById("quizBackBtn");
+    const nextBtn = document.getElementById("quizNextBtn");
+
+    if (prevBtn) {
+        prevBtn.style.display = "none";
+    }
+
+    if (nextBtn) {
+        nextBtn.style.display = "none";
+    }
 }
 
 // Initialize on page load

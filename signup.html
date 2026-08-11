@@ -12,9 +12,9 @@
         <div class="signup-left">
             <div class="signup-image">
                 <div class="image-overlay">
-                    <h2>Empower your shelter staff & rescue networks.</h2>
-                    <p>Create a unified account to collaborate across shelters, manage adoption approvals, and facilitate our boarding coordinates.</p>
-                    <button class="explore-btn">Explore Admin Portal</button>
+                    <h2>Empower your pet adoption journey.</h2>
+                    <p>Create an account to access exclusive features, track applications, and find your perfect companion.</p>
+                    <button class="explore-btn" onclick="goToPage('index.html')">Explore as Guest</button>
                 </div>
             </div>
         </div>
@@ -32,50 +32,52 @@
 
                 <div class="create-section">
                     <h1>Create an Account</h1>
-                    <p>Register to join your designated shelter network branch.</p>
+                    <p>Join PawHome and start your adoption journey today.</p>
                 </div>
 
-                <form class="signup-form">
+                <form class="signup-form" id="signupForm" onsubmit="handleSignup(event)">
                     <div class="form-row">
                         <div class="form-group">
                             <label>Full Name</label>
-                            <input type="text" placeholder="Sarah Chen" required>
+                            <input type="text" id="fullName" placeholder="John Doe" required>
                         </div>
                         <div class="form-group">
-                            <label>Contact Number</label>
-                            <input type="tel" placeholder="+1(555) 019-2834" required>
+                            <label>Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+1 (555) 123-4567" required>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label>Shelter Email Address</label>
-                        <input type="email" placeholder="sarah.chen@pawhome.org" required>
+                        <label>Email Address</label>
+                        <input type="email" id="email" placeholder="your.email@example.com" required>
                     </div>
 
                     <div class="form-group">
-                        <label>Assigned Shelter Branch / Office</label>
-                        <input type="text" placeholder="PawHome Center North - Bay Area" required>
+                        <label>Home Address</label>
+                        <input type="text" id="address" placeholder="123 Main Street, City, State 12345" required>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
                             <label>Password</label>
-                            <input type="password" placeholder="••••••••" required>
+                            <input type="password" id="password" placeholder="••••••••" required>
                         </div>
                         <div class="form-group">
                             <label>Confirm Password</label>
-                            <input type="password" placeholder="••••••••" required>
+                            <input type="password" id="confirmPassword" placeholder="••••••••" required>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="terms-checkbox">
                             <input type="checkbox" required>
-                            I agree to the Terms of Service and Privacy Policy regarding internal shelter staff records.
+                            I agree to the Terms of Service and Privacy Policy
                         </label>
                     </div>
 
-                    <button type="submit" class="btn-signup">Create Account & Request Access</button>
+                    <div id="signupError" class="error-message" style="display: none;"></div>
+
+                    <button type="submit" class="btn-signup">Create Account</button>
 
                     <div class="login-link">
                         Already have an account? <a href="login.html">Log In</a>
@@ -90,6 +92,7 @@
     </div>
 
     <script src="js/navigation.js"></script>
+    <script src="js/auth.js"></script>
     <script src="js/signup.js"></script>
 </body>
 </html>
