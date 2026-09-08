@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawHome Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar start -->
+
+    <header class="navbar">
+        <div class="logo">🐾 PawHome</div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="quiz-bank.html">Generate Quiz</a>
+            <a href="#">Staff Panel</a>
+            <a href="#">Boarding</a>
+        </nav>
+        <div class="user-profile">
+            <span class="notification-icon">🔔</span>
+            <div class="avatar"></div>
+        </div>
+    </header>
+
+         <!-- Navbar End -->
+
+         <!-- left side bar start -->
+
+    <div class="app-layout">
+        <aside class="sidebar">
+            <nav class="sidebar-links">
+                <a href="index.html" class="active">📊 Dashboard</a>
+                <a href="quiz-bank.html">📋 Quiz Management</a>
+                <a href="user-management.html">👥 User Management</a>
+                <a href="reports.html">📁 Reports</a>
+            </nav>
+        </aside>
+
+        <!-- left side bar end -->
+
+           <!-- hero section 1 start -->
+        <main class="main-content">
+            <div class="action-header">
+                <button class="btn-report">Generate Report PDF 📄</button>
+            </div>
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Pets Sheltered</h3>
+                    <div class="stat-number">348</div>
+                    <p class="stat-sub positive">+12 new this week</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Adoptions</h3>
+                    <div class="stat-number">42</div>
+                    <p class="stat-sub">8 in real progress</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending Applications</h3>
+                    <div class="stat-number">19</div>
+                    <p class="stat-sub negative">Needs immediate review</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Boarding Requests</h3>
+                    <div class="stat-number">8</div>
+                    <p class="stat-sub">3 starting tomorrow</p>
+                </div>
+            </section>
+
+            <!-- hero section 1 end -->
+
+            <!-- hero section-2 start -->
+            <section class="main-data-layout">
+                <div class="data-box chart-container">
+                    <div class="chart-header">
+                        <h3>Adoption Statistics (Monthly Overview)</h3>
+                        <div class="dropdown-year">2024 Year <span>▼</span></div>
+                    </div>
+                    <div class="bar-chart">
+                        <div class="bar-wrapper"><span class="bar-value">24 adopted</span><div class="bar" style="height: 46%;"></div><span class="bar-label">Jan</span></div>
+                        <div class="bar-wrapper"><span class="bar-value">32 adopted</span><div class="bar" style="height: 62%;"></div><span class="bar-label">Feb</span></div>
+                        <div class="bar-wrapper"><span class="bar-value">28 adopted</span><div class="bar" style="height: 54%;"></div><span class="bar-label">Mar</span></div>
+                        <div class="bar-wrapper"><span class="bar-value">40 adopted</span><div class="bar" style="height: 77%;"></div><span class="bar-label">Apr</span></div>
+                        <div class="bar-wrapper"><span class="bar-value">44 adopted</span><div class="bar" style="height: 85%;"></div><span class="bar-label">May</span></div>
+                        <div class="bar-wrapper"><span class="bar-value value-highlight">52 adopted</span><div class="bar class-highlight" style="height: 100%;"></div><span class="bar-label label-highlight">Jun</span></div>
+                        <div class="bar-wrapper"><span class="bar-value">38 adopted</span><div class="bar" style="height: 73%;"></div><span class="bar-label">Jul</span></div>
+                    </div>
+                </div>
+
+                <!-- hero section 2 end -->
+
+                <!-- right side start -->
+
+                <div class="data-box activity-container">
+                    <h3>Recent Activities</h3>
+                    <ul class="activity-list">
+                        <li><strong>Adoption approved</strong> <br><small>Biscuit (Golden Retriever) • 10 mins ago</small></li>
+                        <li><strong>New boarding request</strong> <br><small>Luna (Siamese Cat) • 1 hour ago</small></li>
+                        <li><strong>Application received</strong> <br><small>Coco (Poodle Mix) • 3 hours ago</small></li>
+                        <li><strong>Health check completed</strong> <br><small>Rocky (Frenchie) • Yesterday</small></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- right side end -->
+
+            <!-- footer start -->
+            <section class="data-box table-container">
+                <h3>Active Shelter Partners</h3>
+                <table class="partners-table">
+                    <thead>
+                        <tr>
+                            <th>Shelter Location</th>
+                            <th>Capacity</th>
+                            <th>Pending Reviews</th>
+                            <th>Overall Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>PawHome Center North - Bay Area</td><td>85% filled</td><td class="table-link">12 applications</td><td class="rating">4.9 ★</td></tr>
+                        <tr><td>Green Valley Rescue Sanctuary</td><td>62% filled</td><td class="table-link">4 applications</td><td class="rating">4.8 ★</td></tr>
+                        <tr><td>Southside Safe Haven</td><td>94% filled</td><td class="table-link">9 applications</td><td class="rating">4.7 ★</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

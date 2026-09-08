@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Questions - PawHome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- navbr start -->
+    <header class="navbar">
+        <div class="logo">🐾 PawHome</div>
+        <nav class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="quiz-bank.html" class="active">Generate Quiz</a>
+            <a href="#">Staff Panel</a>
+            <a href="#">Boarding</a>
+        </nav>
+        <div class="user-profile">
+            <span class="notification-icon">🔔</span>
+            <div class="avatar"></div>
+        </div>
+    </header>
+
+    <div class="app-layout">
+        
+        <!-- Left Sidebar Nav -->
+        <aside class="sidebar">
+            <nav class="sidebar-links">
+                <a href="index.html">📊 Dashboard</a>
+                <a href="quiz-bank.html" class="active">📋 Quiz Management</a>
+                <a href="user-management.html">👥 User Management</a>
+                <a href="reports.html">📁 Reports</a>
+            </nav>
+        </aside>
+
+        <!-- hero area -->
+        <main class="main-content">
+            
+            <!-- nav Links -->
+            <div class="breadcrumb">
+                <a href="quiz-bank.html">Quiz Management</a> <span>&gt;</span> 
+                <a href="generate-quiz.html">Generate</a> <span>&gt;</span> 
+                <a href="review-quiz.html" class="current">Review</a>
+            </div>
+
+            <h2 class="form-page-title">Generated Questions – Review</h2>
+
+            <!--  Success Alert -->
+
+            <div class="alert-success">
+                <span>🟢</span> 5 questions generated successfully
+            </div>
+
+            <!-- Question Card 1 -->
+
+            <div class="review-card">
+                <div class="review-card-header">
+                    <div class="card-header-left">
+                        <span class="q-number">Question 1</span>
+                        <span class="badge status-draft">Time Commitment</span>
+                        <span class="badge medium">Medium</span>
+                    </div>
+                    <div class="card-header-right">
+                        <a href="#" class="btn-text-edit">📝 Edit</a>
+                        <a href="#" class="btn-text-delete">🗑️ Delete</a>
+                    </div>
+                </div>
+                <div class="review-card-body">
+                    <p class="question-text">How many hours of physical activity can you provide for your pet daily?</p>
+                    <ul class="options-container">
+                        <li>Less than 30 minutes</li>
+                        <li>30 to 60 minutes</li>
+                        <li>1 to 2 hours</li>
+                        <li class="highlight-option">More than 2 hours (Recommended for working breeds)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question Card 2 -->
+
+            <div class="review-card">
+                <div class="review-card-header">
+                    <div class="card-header-left">
+                        <span class="q-number">Question 2</span>
+                        <span class="badge status-draft">Pet Care Experience</span>
+                        <span class="badge easy">Easy</span>
+                    </div>
+                    <div class="card-header-right">
+                        <a href="#" class="btn-text-edit">📝 Edit</a>
+                        <a href="#" class="btn-text-delete">🗑️ Delete</a>
+                    </div>
+                </div>
+                <div class="review-card-body">
+                    <p class="question-text">Who will be the primary caregiver responsible for feeding and medical checks?</p>
+                    <ul class="options-container">
+                        <li>Myself individually</li>
+                        <li>Shared equally with a spouse / partner</li>
+                        <li>Children with parental supervision</li>
+                        <li>External hired professional or dog walker</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Question Card 3 -->
+
+            <div class="review-card">
+                <div class="review-card-header">
+                    <div class="card-header-left">
+                        <span class="q-number">Question 3</span>
+                        <span class="badge status-draft">Family Situation</span>
+                        <span class="badge easy">Easy</span>
+                    </div>
+                    <div class="card-header-right">
+                        <a href="#" class="btn-text-edit">📝 Edit</a>
+                        <a href="#" class="btn-text-delete">🗑️ Delete</a>
+                    </div>
+                </div>
+                <div class="review-card-body">
+                    <p class="question-text">How does your household generally sound on a typical weekend?</p>
+                    <ul class="options-container">
+                        <li>Very quiet and peaceful (Low traffic)</li>
+                        <li>Moderate bustle (Occasional visitors)</li>
+                        <li>Busy and energetic (Kids playing, music)</li>
+                        <li>Highly dynamic / unpredictable</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--  Footer  -->
+              
+            <div class="review-footer">
+                <a href="#" class="btn-text-delete">Discard All</a>
+                <div class="footer-buttons-right">
+                    <button class="btn-secondary-outline">Regenerate</button>
+                    <button class="btn-primary-large" style="margin-top: 0;">Save All to Question Bank</button>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

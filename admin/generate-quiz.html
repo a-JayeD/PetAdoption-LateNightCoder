@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Quiz Questions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- nav Bar  start -->
+
+    <header class="navbar">
+        <div class="logo">🐾 PawHome</div>
+        <nav class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="quiz-bank.html" class="active">Generate Quiz</a>
+            <a href="#">Staff Panel</a>
+            <a href="#">Boarding</a>
+        </nav>
+        <div class="user-profile">
+            <span class="notification-icon">🔔</span>
+            <div class="avatar"></div>
+        </div>
+    </header>
+
+    <!-- navbar end -->
+
+    <!-- left sidebar start -->
+
+    <div class="app-layout">
+        
+        <!-- Left Sidebar Navigation -->
+        <aside class="sidebar">
+            <nav class="sidebar-links">
+                <a href="index.html">📊 Dashboard</a>
+                <a href="quiz-bank.html">📋 Quiz Management</a>
+                <a href="user-management.html">👥 User Management</a>
+                <a href="reports.html">📁 Reports</a>
+            </nav>
+        </aside>
+
+        <!-- left sidebar End -->
+
+        <!-- hero section 1 start -->
+        <main class="main-content">
+            
+            
+            <div class="breadcrumb">
+                <a href="quiz-bank.html">Quiz Management</a> <span>&gt;</span> <a href="generate-quiz.html" class="current">Generate Questions</a>
+            </div>
+
+            <h2 class="form-page-title">Generate Quiz Questions</h2>
+
+            <!-- card -->
+            <div class="two-column-form-layout">
+                
+                
+                <div class="form-card">
+                    <div class="input-item">
+                        <label>Topic / Category</label>
+                        <select><option>Pet Living Environment</option></select>
+                    </div>
+                    <div class="input-item">
+                        <label>Pet Type</label>
+                        <select><option>Dogs</option></select>
+                    </div>
+                    <div class="input-item">
+                        <label>Number of Questions</label>
+                        <input type="number" value="5">
+                    </div>
+                    <div class="input-item">
+                        <label>Difficulty</label>
+                        <select><option>Medium</option></select>
+                    </div>
+                   
+                    <a href="review-quiz.html" class="btn-primary-large" style="text-decoration: none; display: inline-block; text-align: center;">Generate Questions</a>
+                </div>
+
+                <!-- AI Assistant  Sidebar -->
+                <div class="ai-helper-card">
+                    <h3>AI Assistant ✨</h3>
+                    <p>AI will generate structured quiz questions based on your criteria. You can review, modify choices, and edit details before adding them to your official Question Bank.</p>
+                    
+                    <div class="rules-box">
+                        <h4>Rules Applied:</h4>
+                        <ul>
+                            <li>Single-choice multiple choice format</li>
+                            <li>Clear, welcoming, pet-owner focus</li>
+                            <li>Actionable, logical criteria filters</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
