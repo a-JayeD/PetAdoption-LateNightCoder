@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - PawHome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- navbr start -->
+    <header class="navbar">
+        <div class="logo">🐾 PawHome</div>
+        <nav class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="quiz-bank.html">Generate Quiz</a>
+            <a href="#">Staff Panel</a>
+            <a href="#">Boarding</a>
+        </nav>
+        <div class="user-profile">
+            <span class="notification-icon">🔔</span>
+            <div class="avatar"></div>
+        </div>
+    </header>
+
+
+    <!-- navbar end -->
+     
+     <!-- left side start -->
+
+    <div class="app-layout">
+        <aside class="sidebar">
+            <nav class="sidebar-links">
+                <a href="index.html">📊 Dashboard</a>
+                <a href="quiz-bank.html">📋 Quiz Management</a>
+                <a href="user-management.html" class="active">👥 User Management</a>
+                <a href="reports.html">📁 Reports</a>
+            </nav>
+        </aside>
+
+        <!-- hero section -->
+
+        <main class="main-content">
+            <div class="page-title-row">
+                <div>
+                    <h2>User Management</h2>
+                    <p class="subtitle">Manage shelter staff, volunteers, and admin permissions</p>
+                </div>
+                <a href="#" class="btn-primary">Add New User</a>
+            </div>
+            <section class="data-box table-container">
+                <table class="partners-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email Address</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Alex Johnston</td><td>alex.j@pawhome.org</td><td>Super Admin</td><td><span class="badge status-active">Active</span></td><td class="actions-cell">✏️ 🗑️</td></tr>
+                        <tr><td>Sarah Ahmed</td><td>sarah.a@pawhome.org</td><td>Shelter Manager</td><td><span class="badge status-active">Active</span></td><td class="actions-cell">✏️ 🗑️</td></tr>
+                        <tr><td>Tanvir Rahman</td><td>tanvir.r@pawhome.org</td><td>Veterinarian</td><td><span class="badge status-active">Active</span></td><td class="actions-cell">✏️ 🗑️</td></tr>
+                        <tr><td>Emily Davis</td><td>emily.d@gmail.com</td><td>Volunteer</td><td><span class="badge status-active">Active</span></td><td class="actions-cell">✏️ 🗑️</td></tr>
+                        <tr><td>Rahat Khan</td><td>rahat.k@gmail.com</td><td>Volunteer Coordinator</td><td><span class="badge status-draft">Inactive</span></td><td class="actions-cell">✏️ 🗑️</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

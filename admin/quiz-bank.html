@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Question Bank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- navbar start -->
+    <header class="navbar">
+        <div class="logo">🐾 PawHome</div>
+        <nav class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="quiz-bank.html" class="active">Generate Quiz</a>
+            <a href="#">Staff Panel</a>
+            <a href="#">Boarding</a>
+        </nav>
+        <div class="user-profile">
+            <span class="notification-icon">🔔</span>
+            <div class="avatar"></div>
+        </div>
+    </header>
+
+    <!-- navbar end -->
+
+     <!-- Left Sidebar start-->
+
+    <div class="app-layout">
+        
+       
+        <aside class="sidebar">
+            <nav class="sidebar-links">
+                <a href="index.html">📊 Dashboard</a>
+                <a href="quiz-bank.html" class="active">📋 Quiz Management</a>
+                <a href="user-management.html">👥 User Management</a>
+                <a href="reports.html">📁 Reports</a>
+            </nav>
+        </aside>
+         <!-- Left Sidebar end-->
+
+        <!-- hero section start start-->
+        <main class="main-content">
+            
+            <div class="page-title-row">
+                <div>
+                    <h2>Quiz Question Bank</h2>
+                    <p class="subtitle">Manage eligibility quiz questions for pet adoption</p>
+                </div>
+                <a href="generate-quiz.html" class="btn-primary">Generate New Questions</a>
+            </div>
+
+            <!-- Filters Bar Section -->
+
+            <section class="filters-card">
+                <div class="filter-group">
+                    <label>Category</label>
+                    <select><option>All Categories</option></select>
+                </div>
+                <div class="filter-group">
+                    <label>Pet Type</label>
+                    <select><option>All Types</option></select>
+                </div>
+                <div class="filter-group">
+                    <label>Difficulty</label>
+                    <select><option>All Difficulties</option></select>
+                </div>
+            </section>
+
+            <!-- Question table Card  start-->
+
+            <section class="data-box table-container">
+                <table class="partners-table">
+                    <thead>
+                        <tr>
+                            <th>Question Text</th>
+                            <th>Category</th>
+                            <th>Pet Type</th>
+                            <th>Difficulty</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>What type of home do you live in?</td>
+                            <td>Living Situation</td>
+                            <td>All Pets</td>
+                            <td><span class="badge easy">Easy</span></td>
+                            <td><span class="badge status-active">Active</span></td>
+                            <td class="actions-cell">✏️ 🗑️</td>
+                        </tr>
+                        <tr>
+                            <td>How many hours per day are you home?</td>
+                            <td>Time Commitment</td>
+                            <td>All Pets</td>
+                            <td><span class="badge medium">Medium</span></td>
+                            <td><span class="badge status-active">Active</span></td>
+                            <td class="actions-cell">✏️ 🗑️</td>
+                        </tr>
+                        <tr>
+                            <td>Are there other pets currently living in your household?</td>
+                            <td>Home Environment</td>
+                            <td>All Pets</td>
+                            <td><span class="badge easy">Easy</span></td>
+                            <td><span class="badge status-active">Active</span></td>
+                            <td class="actions-cell">✏️ 🗑️</td>
+                        </tr>
+                        <tr>
+                            <td>Have you previously trained or owned retriever breeds?</td>
+                            <td>Pet Experience</td>
+                            <td>Dogs</td>
+                            <td><span class="badge hard">Hard</span></td>
+                            <td><span class="badge status-active">Active</span></td>
+                            <td class="actions-cell">✏️ 🗑️</td>
+                        </tr>
+                        <tr>
+                            <td>Do you have a secure, fully fenced-in yard?</td>
+                            <td>Living Situation</td>
+                            <td>Dogs</td>
+                            <td><span class="badge easy">Easy</span></td>
+                            <td><span class="badge status-active">Active</span></td>
+                            <td class="actions-cell">✏️ 🗑️</td>
+                        </tr>
+                        <tr>
+                            <td>How will you handle your cat's scratch needs?</td>
+                            <td>Pet Care Tips</td>
+                            <td>Cats</td>
+                            <td><span class="badge medium">Medium</span></td>
+                            <td><span class="badge status-draft">Draft</span></td>
+                            <td class="actions-cell">✏️ 🗑️</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!--  Footer Section -->
+                <div class="pagination-row">
+                    <span>Showing 1-6 of 24 questions</span>
+                    <div class="page-buttons">
+                        <button disabled>Prev</button>
+                        <button class="active">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>Next</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
